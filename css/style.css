@@ -45,7 +45,10 @@ body{
     background-color: #eeeeee;
 
     margin-bottom: 10px;
-    min-height: 350px;
+}
+
+.slider-container{
+    overflow: hidden;
 }
 
 .slider-list{
@@ -53,9 +56,16 @@ body{
     padding: 0;
 
     list-style: none;
+
+
+    display: flex;
+    transition: .2s;
 }
 
 .slider-item{
+    min-width: 1200px;
+    height: 350px;
+
     display: flex;
     justify-content: space-between;
 }
@@ -96,6 +106,33 @@ body{
 
     margin: 0;
     padding: 0;
+}
+
+.button{
+    font-size: 16px;
+    color: #000000;
+    text-transform: uppercase;
+    line-height: 18px;
+    text-align: center;
+    font-weight: 500;
+
+    background-color: #eeeeee;    
+    
+    border: none;
+    border-radius: 2px;
+}
+
+.button:hover,
+.button:focus{
+    background-color: #dfdfdf;
+}
+
+.button:active{
+    color: rgba(0, 0, 0, 0.3);
+
+    border-top: 3px solid #bfbfbf;
+
+    background-color: #d5d5d5;
 }
 
 .visually-hidden:not(:focus):not(:active){
