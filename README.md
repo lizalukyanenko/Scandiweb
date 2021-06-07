@@ -2,7 +2,7 @@
 
 The carousel component is adapted for mobile devices and computers. Supports swipes in mobile version. When scrolling slides to the end of the slider, the "next" button becomes inactive, and the swipe does not work, respectively, when scrolling to the beginning of the slider.
 
-![alt video](https://github.com/lizamarmysh/Scandiweb/dev/img/1.gif)
+![video](https://github.com/lizamarmysh/Scandiweb/blob/dev/img/1.gif)
 
 ## Displaying multiple slides on the screen
 
