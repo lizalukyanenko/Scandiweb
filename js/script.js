@@ -1,5 +1,8 @@
 let position = 0;
 
+const sliderToShow = 1;
+const sliderToScroll = 1;
+
 const list = document.querySelector('.slider-list');
 const item = document.querySelector('.slider-item');
     
@@ -8,20 +11,23 @@ const sliderNext = document.querySelector('.slider-next');
     
 const items = document.querySelectorAll('.slider-item');
 const itemsCount = items.length;
-const itemWidth = list.clientWidth;
+const itemWidth = list.clientWidth / sliderToShow;
+const movePosition = sliderToScroll * itemWidth;
 
 items.forEach((item) => {
     item.style.minWidth = `${itemWidth}px`;
 });
 
 function next(){
-    position -= itemWidth
+    const itemsLeft = itemsCount - (Math.abs(position) + sliderToShow * itemWidth) / itemWidth;
+    position -= itemsLeft >= sliderToScroll ? movePosition : itemsLeft * itemWidth;
     setPosition();
     checkBtn();
 }
 
 function prev(){
-    position += itemWidth
+    const itemsLeft = Math.abs(position) / itemWidth;
+    position += itemsLeft >= sliderToScroll ? movePosition : itemsLeft * itemWidth;
     setPosition();
     checkBtn();
 }
@@ -40,7 +46,7 @@ const setPosition = () => {
 
 const checkBtn = () => {
     sliderPrev.disabled = position == 0;
-    sliderNext.disabled = position <= -(itemsCount - 1) * itemWidth;
+    sliderNext.disabled = position <= -(itemsCount - sliderToShow) * itemWidth;
 };
 
 checkBtn();
@@ -67,12 +73,10 @@ function handleTouchMove(event){
     let xDiff = x2 - x1;
     let yDiff = y2 - y1;
 
-    console.log(position);
     if (Math.abs(xDiff) > Math.abs(yDiff)){
         //r-l
         if (xDiff > 0 ) {
             //right - prev
-            console.log('pos' + position);
             if (position != 0) {
                 prev();
             }
