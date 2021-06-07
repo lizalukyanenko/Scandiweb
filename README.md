@@ -10,8 +10,8 @@ The carousel component is adapted for mobile devices and computers. Supports swi
 
 ## Displaying multiple slides on the screen
 
-The slider supports displaying and scrolling multiple slides on the screen at the same time. In order to change the number of displayed slides, you need to: change the value of the **sliderToShow** variable in the _script.js_ file, and to change the number of slides when scrolling, you need to change the value of the **sliderToScroll** variable.
-To add another slide with information, you need to add a new item **li .slider-item** in the **ul .slider-list** in the _index.html_ file, observing the class hierarchy.
+The slider supports displaying and scrolling multiple slides on the screen at the same time. In order to change the number of displayed slides, you need to: change the value of the `sliderToShow` variable in the _script.js_ file, and to change the number of slides when scrolling, you need to change the value of the `sliderToScroll` variable.
+To add another slide with information, you need to add a new item `li .slider-item` in the `ul .slider-list` in the _index.html_ file, observing the class hierarchy.
 
 ### Multiple slides
 ![video multiple](https://github.com/lizamarmysh/Scandiweb/blob/dev/img/3.gif)
