@@ -1,7 +1,7 @@
 let position = 0;
 
-const sliderToShow = 2;
-const sliderToScroll = 2;
+const sliderToShow = 1;
+const sliderToScroll = 1;
 
 const list = document.querySelector('.slider-list');
 const item = document.querySelector('.slider-item');
