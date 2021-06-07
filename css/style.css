@@ -20,7 +20,7 @@ body{
 }
 
 .centering-wrapper{
-    width: 1200px;
+    width: 70%;
 
     margin: 0 auto;
     padding: 0 20px;
@@ -33,12 +33,12 @@ body{
     color: #000000;
     text-align: center;
 
-    background-color: #eeeeee;
-    min-height: 150px;
+    background-color: #f8f6f6;
+    min-height: 80px;
 
     margin-top: 0;
     margin-bottom: 0px;
-    padding-top: 50px;
+    padding-top: 10px;
 }
 
 .slider-info{
@@ -49,6 +49,8 @@ body{
 
 .slider-container{
     overflow: hidden;
+    min-height: 370px;
+    padding-top: 2%;
 }
 
 .slider-list{
@@ -63,15 +65,12 @@ body{
 }
 
 .slider-item{
-    min-width: 1200px;
-    height: 350px;
-
     display: flex;
     justify-content: space-between;
 }
 
 .slider-text{
-    width: 700px;
+    width: 65%;
 
     padding-top: 50px;
 }
@@ -82,22 +81,16 @@ body{
     line-height: 55px;
     font-weight: 500;
 
-    width: 730px;
-
     margin: 0;
     margin-bottom: 28px;    
 }
 
 .slider-item p{
-    width: 700px;
-
     margin-bottom: 42px;
 }
 
 .slider-img{
-    background-image: url("../img/html.png");
-
-    width: 450px;
+    width: 30%;
     height: 330px;
 
     background-size: contain;
@@ -106,6 +99,18 @@ body{
 
     margin: 0;
     padding: 0;
+}
+
+.img-html{
+    background-image: url("../img/html.png");
+}
+
+.img-css{
+    background-image: url("../img/css.png");
+}
+
+.img-js{
+    background-image: url("../img/js.png");
 }
 
 .button{
@@ -135,6 +140,31 @@ body{
     background-color: #d5d5d5;
 }
 
+.slider-prev,
+.slider-next{
+    font-family: Roboto, Arial, sans-serif;
+    font-size: 26px;
+    line-height: 24px;
+    font-weight: 400;   
+    color: #283136; 
+
+    position: absolute;
+	top: 29%;
+	left: 20px;
+	width: 50px;
+	height: 50px;
+}
+
+.slider-next {
+    left: auto;
+    right: 20px;
+}
+
+.slider-prev:disabled,
+.slider-next:disabled{
+    color: #b4b4b4;
+}
+
 .visually-hidden:not(:focus):not(:active){
     position: absolute;
     width: 1px;
@@ -147,4 +177,39 @@ body{
     clip-path: inset(100%);
     clip: rect(0 0 0 0);
     overflow: hidden;
+}
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) and (orientation : portrait) {
+    .centering-wrapper{
+        width: 80%;
+    
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+
+    .slider-prev,
+    .slider-next{
+	font-family: Roboto, Arial, sans-serif;
+    font-size: 26px;
+    line-height: 24px;
+    font-weight: 400;   
+    color: #283136;
+
+    position: absolute;
+	top: 13%;
+	left: 20px;
+	width: 50px;
+	height: 50px;
+}
+
+    .slider-next {
+        left: auto;
+        right: 20px;
+    }
+
+    .slider-container{
+        overflow: hidden;
+        min-height: 370px;
+        padding-top: 2%;
+    }
 }
